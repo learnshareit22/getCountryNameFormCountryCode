@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <h1>LearnShareIT</h1>
+    <button onclick = "getCountryNameFromCountryCode()">Get country name from country code</button>
+    <script type = "text/javascript">
+    function getCountryNameFromCountryCode(){
+    //Get country name from country code using JavaScript
+       fetch("countries.json")
+      // Convert the text in the json file into json format
+      .then(res => res.json())
+      // Fetch all countries' data in the json file into allCountries variable
+      .then(allCountries => {
+        alert(allCountries[prompt("Type country code")]);
+      });
+    }
+    </script>
+  </body>
+</html>
